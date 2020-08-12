@@ -32,4 +32,4 @@ All the search parameters can be changed in the `amazon_config.py` file.
 
 ### Get Product Reports
 
-After running `scraper.py`, the program creates a file in the `reports` directory. Copy and paste the code into a JSON formatter online to get a better formatter. The first item is the cheapest item available.
+After running `scraper.py`, the program creates a file in the `reports` directory. Copy and paste the code into an online JSON formatter for better readability. The first item in the file is the cheapest item available.
