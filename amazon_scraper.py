@@ -1,17 +1,16 @@
 import time
 from selenium.webdriver.common.keys import Keys
-from amazon_config import (
-    get_web_driver_options,
-    get_chrome_web_driver,
-    set_ignore_certificate_error,
-    set_browser_as_incognito,
-    # set_automation_as_head_less,
+from amazon_filters import (
     NAME,
     CURRENCY,
     FILTERS,
     BASE_URL,
     DIRECTORY
 )
+from driver_configs import (get_web_driver_options,
+                            get_chrome_web_driver,
+                            set_ignore_certificate_error,
+                            set_browser_as_incognito)
 from selenium.common.exceptions import NoSuchElementException
 import json
 from datetime import datetime
@@ -33,6 +32,9 @@ class GenerateProductReport:
             'base_link': self.base_link,
             'products': self.data
         }
+        if self.data is None:
+            return print("Could not create a report for the items.")
+
         print("Creating report...")
         with open(f'{DIRECTORY}/{file_name}.json', 'w') as f:
             json.dump(report, f)
@@ -57,7 +59,6 @@ class AmazonAPI:
         self.base_url = base_url
         self.search_term = search_term
         options = get_web_driver_options()
-        # set_automation_as_head_less(options)
         set_ignore_certificate_error(options)
         set_browser_as_incognito(options)
         self.driver = get_chrome_web_driver(options)
@@ -66,7 +67,7 @@ class AmazonAPI:
 
     def run(self):
         print("Starting Script...")
-        print(f"Searching for {self.search_term} on {BASE_URL}")
+        print(f"Searching for {self.search_term} on {self.base_url}")
         links = self.get_products_links()
         if not links:
             print("Stopped script.")
@@ -76,6 +77,7 @@ class AmazonAPI:
         products = self.get_products_info(links)
         print(f"Got info for {len(products)} products...")
         self.driver.quit()
+        # print(products)
         return products
 
     def get_products_links(self):
@@ -88,7 +90,8 @@ class AmazonAPI:
         self.driver.get(f'{self.driver.current_url}{self.price_filter}')
         print(f"Our url: {self.driver.current_url}")
         time.sleep(2)  # wait to load page
-        result_list = self.driver.find_elements_by_class_name('s-result-list')
+        result_list = self.driver.find_elements_by_class_name(
+            's-result-list' or 'sg-col-inner')
         links = []
         try:
             results = result_list[0].find_elements_by_xpath(
@@ -101,29 +104,23 @@ class AmazonAPI:
             return links
 
     def get_products_info(self, links):
-        asins = self.get_asins(links)
         products = []
-        for asin in asins:
-            product = self.get_single_product_info(asin)
+        for link in links:
+            product = self.get_single_product_info(link)
             if product:
                 products.append(product)
         return products
 
-    def get_asins(self, links):
-        return [self.get_asin(link) for link in links]
-
-    def get_single_product_info(self, asin):
-        print(f"Product ID: {asin} - getting data...")
-        product_short_url = self.shorten_url(asin)
-        self.driver.get(f'{product_short_url}?language=en_GB')
+    def get_single_product_info(self, link):
+        print(f"Evaluating: {link}")
+        self.driver.get(link)
         time.sleep(2)
         title = self.get_title()
         seller = self.get_seller()
         price = self.get_price()
         if title and seller and price:
             product_info = {
-                'asin': asin,
-                'url': product_short_url,
+                'url': link,
                 'title': title,
                 'seller': seller,
                 'price': price
@@ -172,13 +169,6 @@ class AmazonAPI:
             return None
         return price
 
-    @staticmethod
-    def get_asin(product_link):
-        return product_link[product_link.find('/dp/') + 4:product_link.find('/ref')]
-
-    def shorten_url(self, asin):
-        return self.base_url + 'dp/' + asin
-
     def convert_price(self, price):
         price = price.split(self.currency)[1]
         try:
@@ -192,7 +182,7 @@ class AmazonAPI:
         return float(price)
 
 
-if __name__ == '__main__':
-    am = AmazonAPI(NAME, FILTERS, BASE_URL, CURRENCY)
-    data = am.run()
+if __name__ == "__main__":
+    amazon = AmazonAPI(NAME, FILTERS, BASE_URL, CURRENCY)
+    data = amazon.run()
     GenerateProductReport(NAME, FILTERS, BASE_URL, CURRENCY, data)

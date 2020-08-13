@@ -1,0 +1,62 @@
+{
+  "title": "Laptops",
+  "date": "08/12/2020 18:32:57",
+  "best_item": {
+    "url": "https://www.amazon.com/ASUS-Ultra-Thin-Processor-L203MA-DS04-Microsoft/dp/B07N6S4SY1/ref=sr_1_9?dchild=1&keywords=Laptops&qid=1597282313&refinements=p_36%3A27500-65000&sr=8-9",
+    "title": "ASUS VivoBook L203MA Laptop, 11.6\u201d HD Display, Intel Celeron Dual Core CPU, 4GB RAM, 64GB Storage, USB-C, Windows 10 Home In S Mode, Up To 10 Hours Battery Life, One Year of Microsoft 365, L203MA-DS04",
+    "seller": "Visit the ASUS Store",
+    "price": 261.99
+  },
+  "currency": "$",
+  "filters": {
+    "min": "275",
+    "max": "650"
+  },
+  "base_link": "http://www.amazon.com/",
+  "products": [{
+    "url": "https://www.amazon.com/pulgadas-Display-Graphics-retroiluminado-A515-43-R19L/dp/B07RF1XD36/ref=sr_1_3?dchild=1&keywords=Laptops&qid=1597282313&refinements=p_36%3A27500-65000&sr=8-3",
+    "title": "Acer Aspire 5 Slim Laptop, 15.6 inches Full HD IPS Display, AMD Ryzen 3 3200U, Vega 3 Graphics, 4GB DDR4, 128GB SSD, Backlit Keyboard, Windows 10 in S Mode, A515-43-R19L,Silver",
+    "seller": "Visit the Acer Store",
+    "price": 349.99
+  }, {
+    "url": "https://www.amazon.com/HP-15-Inch-i5-1035G1-Solid-State-15-dy1036nr/dp/B085B5SXLY/ref=sr_1_6?dchild=1&keywords=Laptops&qid=1597282313&refinements=p_36%3A27500-65000&sr=8-6",
+    "title": "HP 15-Inch FHD Laptop, 10th Gen Intel Core i5-1035G1, 8 GB RAM, 256 GB Solid-State Drive, Windows 10 Home (15-dy1036nr, Natural Silver)",
+    "seller": "Visit the HP Store",
+    "price": 579.99
+  }, {
+    "url": "https://www.amazon.com/Lenovo-IdeaPad-Processor-Graphics-81W0003QUS/dp/B0862269YP/ref=sr_1_8?dchild=1&keywords=Laptops&qid=1597282313&refinements=p_36%3A27500-65000&sr=8-8",
+    "title": "Lenovo IdeaPad 3 14\" Laptop, 14.0\" FHD (1920 x 1080) Display, AMD Ryzen 5 3500U Processor, 8GB DDR4 RAM, 256GB SSD, AMD Radeon Vega 8 Graphics, Narrow Bezel, Windows 10, 81W0003QUS, Abyss Blue",
+    "seller": "Visit the Lenovo Store",
+    "price": 449.99
+  }, {
+    "url": "https://www.amazon.com/ASUS-Ultra-Thin-Processor-L203MA-DS04-Microsoft/dp/B07N6S4SY1/ref=sr_1_9?dchild=1&keywords=Laptops&qid=1597282313&refinements=p_36%3A27500-65000&sr=8-9",
+    "title": "ASUS VivoBook L203MA Laptop, 11.6\u201d HD Display, Intel Celeron Dual Core CPU, 4GB RAM, 64GB Storage, USB-C, Windows 10 Home In S Mode, Up To 10 Hours Battery Life, One Year of Microsoft 365, L203MA-DS04",
+    "seller": "Visit the ASUS Store",
+    "price": 261.99
+  }, {
+    "url": "https://www.amazon.com/Port%C3%A1til-Premium-pulgadas-pantalla-t%C3%A1ctil/dp/B081SM57RY/ref=sr_1_10?dchild=1&keywords=Laptops&qid=1597282313&refinements=p_36%3A27500-65000&sr=8-10",
+    "title": "2020 HP 15 15.6\" HD Touchscreen Premium Laptop - 10th Gen Intel Core i5-1035G1, 16GB DDR4, 512GB SSD, USB Type-C, HDMI, Windows 10 - Silver W",
+    "seller": "Visit the HP Store",
+    "price": 724.61
+  }, {
+    "url": "https://www.amazon.com/Dell-Inspiron-Touchscreen-i3-1005G1-Accessories/dp/B087WLV4H2/ref=sr_1_16?dchild=1&keywords=Laptops&qid=1597282313&refinements=p_36%3A27500-65000&sr=8-16",
+    "title": "2020 Dell Inspiron 15 15.6\" Touchscreen Laptop for Business and Student, 10th Gen Intel i3-1005G1(Up to 3.4GHz,Beat i5-8250U), 8GB RAM, 1TB HDD + 128GB SSD, HDMI 802.11ac Win10 w/HESVAP Accessories",
+    "seller": "Visit the Dell Store",
+    "price": 599.0
+  }, {
+    "url": "https://www.amazon.com/Acer-Aspire-Computer-i5-7200u-Bluetooth/dp/B089FMNLLD/ref=sr_1_18?dchild=1&keywords=Laptops&qid=1597282313&refinements=p_36%3A27500-65000&sr=8-18",
+    "title": "2020 Newest Acer Aspire 5 15.6\" FHD 1080P Laptop Computer| AMD Ryzen 3 3200U up to 3.5 GHz(Beat i5-7200u)| 8GB RAM| 128GB SSD+500GB HDD| Backlit KB| WiFi| Bluetooth| HDMI| Windows 10| Laser USB Cable",
+    "seller": "Visit the Acer Store",
+    "price": 569.0
+  }, {
+    "url": "https://www.amazon.com/HP-Touchscreen-Business-Dual-Core-Bluetooth/dp/B081D9HJ4P/ref=sr_1_19?dchild=1&keywords=Laptops&qid=1597282313&refinements=p_36%3A27500-65000&sr=8-19",
+    "title": "HP 14\" Touchscreen Home and Business Laptop Ryzen 3-3200U, 8GB RAM, 128GB M.2 SSD, Dual-Core up to 3.50 GHz, Vega 3 Graphics, RJ-45, USB-C, 4K Output HDMI, Bluetooth, Webcam, 1366x768, Win 10",
+    "seller": "Visit the HP Store",
+    "price": 495.0
+  }, {
+    "url": "https://www.amazon.com/HP-Premium-i5-7200U-Bluetooth-Windows/dp/B088PQMHVJ/ref=sr_1_20?dchild=1&keywords=Laptops&qid=1597282313&refinements=p_36%3A27500-65000&sr=8-20",
+    "title": "2020 Newest HP 14 Inch Premium Laptop, AMD Athlon Silver 3050U up to 3.2 GHz(Beat i5-7200U), 8GB DDR4 RAM, 128GB SSD+500GB HDD, Bluetooth, Webcam,WiFi,Type-C, HDMI, Windows 10 S, Black + Laser HDMI",
+    "seller": "Visit the HP Store",
+    "price": 429.0
+  }]
+}

@@ -1,16 +1,5 @@
 from selenium import webdriver
 
-DIRECTORY = 'reports'
-NAME = 'PS4'  # Search bar input/query
-CURRENCY = '$'
-MIN_PRICE = '275'  # Minimum price
-MAX_PRICE = '650'  # Maximum price
-FILTERS = {
-    'min': MIN_PRICE,
-    'max': MAX_PRICE
-}
-BASE_URL = "http://www.amazon.com/"
-
 
 def get_chrome_web_driver(options):
     return webdriver.Chrome("./chromedriver", chrome_options=options)
