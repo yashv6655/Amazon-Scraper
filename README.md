@@ -28,7 +28,7 @@ Run `python scraper.py` in the terminal.
 
 ### Change the Search Parameters
 
-All the search parameters can be changed in the `amazon_config.py` file.
+All the search parameters can be changed in the `amazon_filters.py` file.
 
 ### Get Product Reports
 
