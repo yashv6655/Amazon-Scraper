@@ -4,7 +4,7 @@ A Webscraper For [amazon.com](https://amazon.com).
 
 ### Install Python
 
-If Python isn't installed on your device, [click here](https://www.python.org/downloads/) to download the latest version. Check the `PATH` variable box. If you have Windows, install the executable installer in order to change the `PATH` variable.
+If Python isn't installed on your device, [click here](https://www.python.org/downloads/) to download the latest version. Check the `PATH` variable box. If you have Windows, install the [executable installer](https://www.python.org/downloads/windows/) in order to change the `PATH` variable.
 
 ### Install Chromedriver
 
